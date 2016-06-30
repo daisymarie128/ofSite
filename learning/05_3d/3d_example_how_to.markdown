@@ -11,8 +11,23 @@ First, you have to include and define `ofxAssimpModelLoader` in your `ofApp.h`:
     
 ```cpp
 #include "ofxAssimpModelLoader.h"
-ofxAssimpModelLoader yourModel;
 ```
+
+Next, inside your class below this add `ofxAssimpModelLoader yourModel;`:
+
+Should look something like this:
+```cpp
+class ofApp : public ofBaseApp{
+	
+	public:
+	void setup();
+	void update();
+	void draw();
+	
+	ofxAssimpModelLoader yourModel;
+};
+```
+
 
 Then, in your `ofApp.cpp` file you load the model and draw it like this:
 
